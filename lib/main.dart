@@ -13,13 +13,16 @@ class MyApp extends StatelessWidget {
           title: Text('Material App Bar'),
         ),
         body: Center(
-          child: Container(
-            child: Text('Hello World'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text('without equatable'),
+              Text(runner()[0]),
+              SizedBox(height: 8),
+              Text('with equatable'),
+              Text(runner()[1]),
+            ],
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: runner,
         ),
       ),
     );
